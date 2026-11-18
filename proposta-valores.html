@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Vó Lila Gastrobar: proposta de valores</title>
+<style>
+  :root {
+    --preto: #141414;
+    --creme: #F4EDE1;
+    --madeira: #5C4234;
+    --bronze: #B08A4E;
+    --texto: #2A2622;
+    --suave: #6B6259;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--creme);
+    color: var(--texto);
+    font-family: "Plus Jakarta Sans", Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.55;
+  }
+  .folha {
+    max-width: 820px;
+    margin: 0 auto;
+    padding: 40px 24px;
+  }
+  header {
+    background: var(--madeira);
+    color: var(--creme);
+    padding: 36px 32px;
+    border-radius: 12px;
+  }
+  header .marca { letter-spacing: 0.3em; font-size: 13px; color: var(--bronze); }
+  h1 { font-family: "Cormorant Garamond", Georgia, serif; font-size: 36px; margin: 8px 0 6px; font-weight: 600; }
+  h2 { font-family: "Cormorant Garamond", Georgia, serif; font-size: 26px; color: var(--madeira); margin: 40px 0 12px; }
+  h3 { font-size: 18px; margin: 0 0 8px; color: var(--madeira); }
+  p { margin: 0 0 12px; }
+  .suave { color: var(--suave); font-size: 14px; }
+  table { width: 100%; border-collapse: collapse; margin: 12px 0 8px; background: #fff; border-radius: 8px; overflow: hidden; }
+  th, td { text-align: left; padding: 12px 14px; border-bottom: 1px solid #E4DACB; vertical-align: top; }
+  th { background: var(--madeira); color: var(--creme); font-size: 14px; }
+  td.valor { white-space: nowrap; font-weight: 600; }
+  .cartoes { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  .cartao { background: #fff; border: 1px solid #E4DACB; border-radius: 12px; padding: 20px; }
+  .cartao.destaque { border: 2px solid var(--bronze); }
+  .tag { display: inline-block; background: var(--bronze); color: #fff; font-size: 12px; padding: 3px 10px; border-radius: 999px; margin-bottom: 8px; }
+  ul { padding-left: 20px; margin: 8px 0 0; }
+  li { margin-bottom: 6px; }
+  .nota { background: #fff; border-left: 4px solid var(--bronze); padding: 14px 18px; border-radius: 8px; font-size: 14px; color: var(--suave); }
+  .btn-pdf {
+    position: fixed; right: 16px; bottom: 16px;
+    background: var(--bronze); color: #fff; border: 0; border-radius: 999px;
+    padding: 12px 18px; font-size: 15px; cursor: pointer;
+  }
+  @media (max-width: 640px) {
+    .cartoes { grid-template-columns: 1fr; }
+    h1 { font-size: 30px; }
+  }
+  @media print {
+    @page { size: A4; margin: 16mm; }
+    body { background: #fff; font-size: 12pt; }
+    .folha { padding: 0; max-width: none; }
+    .btn-pdf { display: none; }
+    header, th { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    .cartao, table, .nota { break-inside: avoid; }
+    h2 { break-after: avoid; }
+  }
+</style>
+</head>
+<body>
+<main class="folha">
+
+  <header>
+    <div class="marca">VÓ LILA GASTROBAR</div>
+    <h1>Proposta de valores</h1>
+    <p>Presença digital: Perfil no Google e página própria com cardápio e pedido direto.</p>
+    <p class="suave" style="color:#E9DFCB">Icó, Ceará · 18/11/2026</p>
+  </header>
+
+  <h2>1. Google Meu Negócio</h2>
+  <p>Cuidamos do seu perfil no Google, que é onde a maioria dos clientes encontra o restaurante primeiro.</p>
+
+  <table>
+    <thead>
+      <tr><th>Item</th><th>Valor</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>Implantação: auditoria, padronização de nome, endereço e telefone, categorias, atributos e fotos</td><td class="valor">R$ 450</td></tr>
+      <tr><td>Mensalidade: respostas a comentários, até 1 post por semana, otimização de imagens e relatório mensal</td><td class="valor">R$ 250 / mês</td></tr>
+    </tbody>
+  </table>
+  <p class="suave">Contrato mínimo de 3 meses para a gestão mensal. A mensalidade começa após a implantação.</p>
+
+  <h2>2. Página própria</h2>
+  <p>Uma página leve, feita para o celular, com cardápio, botão de pedido e WhatsApp, no lugar do link genérico da bio.</p>
+
+  <div class="cartoes">
+    <div class="cartao">
+      <h3>Básico</h3>
+      <p class="suave">Página única para o celular.</p>
+      <ul>
+        <li>Cardápio por categoria, com preço</li>
+        <li>Botão de pedido para o Anota e WhatsApp</li>
+        <li>Endereço, horário e mapa iguais ao Google</li>
+        <li>Perguntas frequentes</li>
+      </ul>
+      <p style="margin-top:14px"><strong>R$ 1.000</strong> (implantação)</p>
+    </div>
+    <div class="cartao destaque">
+      <span class="tag">Recomendado</span>
+      <h3>Com SEO local</h3>
+      <p class="suave">Tudo do básico, com foco em aparecer nas buscas da região.</p>
+      <ul>
+        <li>Tudo do pacote básico</li>
+        <li>Títulos e descrições para buscas locais</li>
+        <li>Dados estruturados do restaurante</li>
+        <li>Palavras-chave da região (ex.: restaurante em Icó)</li>
+        <li>Medição de cliques em pedido e WhatsApp</li>
+      </ul>
+      <p style="margin-top:14px"><strong>R$ 1.800</strong> (implantação)</p>
+    </div>
+  </div>
+
+  <p style="margin-top:14px"><strong>Adicional opcional: aplicativo instalável (PWA).</strong> A página pode ser instalada na tela inicial do celular e funcionar com conexão fraca. Valor: <strong>R$ 450</strong>.</p>
+
+  <h2>3. Manutenção da página</h2>
+  <p>Atualização de cardápio e preços: <strong>[A CONFIRMAR] por mês</strong>.</p>
+
+  <h2>4. Custos por conta do cliente</h2>
+  <ul>
+    <li>Domínio (.com.br): cerca de R$ 40 a R$ 120 por ano, pago ao registro.br.</li>
+    <li>Hospedagem: cerca de R$ 10 a R$ 50 por mês, conforme o provedor.</li>
+    <li>Ferramentas de pedido e pagamento (Anota AI): valores conforme o contrato com o fornecedor.</li>
+  </ul>
+
+  <h2>5. Forma de pagamento e prazo</h2>
+  <ul>
+    <li>Implantação: paga na aprovação, conforme o pacote escolhido.</li>
+    <li>Mensalidade do Google: a partir do segundo mês.</li>
+    <li>Prazo estimado: 4 semanas para o pacote completo.</li>
+  </ul>
+
+  <h2>6. Pontos de atenção</h2>
+  <ul>
+    <li>Trocar o nome no Google exige nova verificação. Essa alteração é feita pelo dono ou gerente do perfil, em um dia de pouco movimento.</li>
+    <li>O Google não tem mais a seção de perguntas e respostas. As respostas que o cliente precisa ficam na página.</li>
+    <li>O botão de pedido depende de o Anota estar ativo no horário comercial.</li>
+    <li>Resultados no Google dependem de fatores fora do nosso controle. Não garantimos posição.</li>
+  </ul>
+
+  <div class="nota" style="margin-top:28px">
+    Os valores acima são uma proposta inicial. Podemos ajustar o escopo conforme as necessidades do restaurante.
+  </div>
+
+</main>
+
+<button class="btn-pdf" onclick="window.print()">Salvar em PDF</button>
+</body>
+</html>

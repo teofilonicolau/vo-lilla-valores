@@ -1,0 +1,361 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Vó Lila Gastrobar: proposta de valores</title>
+<meta name="description" content="Proposta de valores para presença digital da Vó Lila Gastrobar.">
+<style>
+  :root {
+    --preto: #141414;
+    --creme: #F4EDE1;
+    --superficie: #FFFFFF;
+    --madeira: #5C4234;
+    --titulo: #5C4234;
+    --bronze: #B08A4E;
+    --texto: #2A2622;
+    --suave: #6B6259;
+    --borda: #E4DACB;
+    --cabecalho-bg: #5C4234;
+    --cabecalho-texto: #F4EDE1;
+    --cabecalho-data: #E9DFCB;
+    --sombra-hover: 0 10px 24px -6px rgba(92, 66, 52, 0.16), 0 4px 10px -4px rgba(92, 66, 52, 0.1);
+    --sombra-ativa: 0 4px 12px -2px rgba(176, 138, 78, 0.25);
+  }
+
+  [data-theme="dark"] {
+    --creme: #141210;
+    --superficie: #1E1B18;
+    --madeira: #D8B377;
+    --titulo: #E5C794;
+    --bronze: #C89D5C;
+    --texto: #EDE6DC;
+    --suave: #A89E93;
+    --borda: #332D27;
+    --cabecalho-bg: #231E1A;
+    --cabecalho-texto: #F4EDE1;
+    --cabecalho-data: #C5B8A5;
+    --sombra-hover: 0 12px 28px -6px rgba(0, 0, 0, 0.55), 0 4px 12px -3px rgba(200, 157, 92, 0.18);
+    --sombra-ativa: 0 4px 14px -2px rgba(200, 157, 92, 0.35);
+  }
+
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    margin: 0;
+    background: var(--creme);
+    color: var(--texto);
+    font-family: "Plus Jakarta Sans", Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.55;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  .folha { padding: 20px 16px 48px; max-width: 760px; margin: 0 auto; }
+
+  header {
+    position: relative;
+    background: var(--cabecalho-bg);
+    color: var(--cabecalho-texto);
+    padding: 28px 22px;
+    border-radius: 14px;
+    border: 1px solid transparent;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+  }
+  [data-theme="dark"] header {
+    border-color: var(--borda);
+  }
+  .topo-cabecalho {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+  }
+  .marca { letter-spacing: .28em; font-size: 12px; color: var(--bronze); }
+
+  .btn-tema {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: rgba(255, 255, 255, 0.1);
+    color: var(--cabecalho-texto);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 999px;
+    padding: 6px 12px;
+    font-family: inherit;
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.15s ease, border-color 0.2s ease;
+  }
+  .btn-tema:hover {
+    background: rgba(255, 255, 255, 0.18);
+    border-color: var(--bronze);
+    transform: translateY(-1px);
+  }
+  .btn-tema:active {
+    transform: translateY(0) scale(0.95);
+  }
+  .btn-tema svg {
+    width: 15px;
+    height: 15px;
+    fill: currentColor;
+  }
+
+  h1 {
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-size: 32px; line-height: 1.15; margin: 8px 0 8px; font-weight: 600;
+  }
+  header p { margin: 0; }
+  .data { color: var(--cabecalho-data); font-size: 14px; margin-top: 10px; }
+
+  h2 {
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-size: 26px; color: var(--titulo); margin: 34px 0 10px; line-height: 1.2;
+  }
+  h3 { font-size: 18px; margin: 0 0 6px; color: var(--titulo); }
+  p { margin: 0 0 12px; }
+  .suave { color: var(--suave); font-size: 14px; }
+
+  .bloco {
+    background: var(--superficie); border: 1px solid var(--borda); border-radius: 12px;
+    padding: 18px; margin-bottom: 12px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, border-color 0.25s ease, transform 0.22s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.22s ease;
+  }
+  .bloco:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--sombra-hover);
+    border-color: var(--bronze);
+  }
+  .bloco:active {
+    transform: translateY(-1px) scale(0.985);
+    box-shadow: var(--sombra-ativa);
+  }
+  .bloco.pulsando {
+    animation: pulso-cartao 0.38s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+  .linha {
+    display: flex; justify-content: space-between; align-items: baseline; gap: 12px;
+    padding: 12px 0; border-bottom: 1px solid var(--borda);
+  }
+  .linha:last-child { border-bottom: 0; }
+  .linha .item { flex: 1; }
+  .valor { font-weight: 700; white-space: nowrap; color: var(--madeira); }
+
+  .cartoes { display: grid; grid-template-columns: 1fr; gap: 12px; }
+  .cartao {
+    position: relative;
+    background: var(--superficie);
+    border: 1px solid var(--borda);
+    border-radius: 12px;
+    padding: 18px;
+    cursor: pointer;
+    user-select: none;
+    transition:
+      transform 0.24s cubic-bezier(0.22, 1, 0.36, 1),
+      box-shadow 0.24s ease,
+      border-color 0.24s ease,
+      background-color 0.3s ease;
+  }
+  .cartao:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--sombra-hover);
+    border-color: var(--bronze);
+  }
+  .cartao:active {
+    transform: translateY(-1px) scale(0.975);
+    box-shadow: var(--sombra-ativa);
+  }
+  .cartao.selecionado {
+    border: 2px solid var(--bronze);
+    box-shadow: var(--sombra-ativa);
+  }
+  .cartao.pulsando {
+    animation: pulso-cartao 0.38s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+  @keyframes pulso-cartao {
+    0% { transform: scale(1); }
+    40% { transform: translateY(-2px) scale(0.97); }
+    80% { transform: translateY(-5px) scale(1.01); }
+    100% { transform: translateY(-5px) scale(1); }
+  }
+  .cartao.destaque { border: 2px solid var(--bronze); }
+  .tag {
+    display: inline-block; background: var(--bronze); color: #fff;
+    font-size: 12px; padding: 3px 10px; border-radius: 999px; margin-bottom: 8px;
+  }
+  ul { padding-left: 20px; margin: 8px 0 0; }
+  li { margin-bottom: 6px; }
+  .preco { margin-top: 14px; font-size: 17px; }
+
+  .nota {
+    background: var(--superficie); border-left: 4px solid var(--bronze);
+    padding: 14px 16px; border-radius: 8px; font-size: 14px; color: var(--suave);
+    margin-top: 24px;
+    transition: background-color 0.3s ease;
+  }
+
+  @media (min-width: 640px) {
+    .folha { padding: 36px 24px 64px; }
+    h1 { font-size: 40px; }
+    header { padding: 36px 32px; }
+    .cartoes { grid-template-columns: 1fr 1fr; }
+  }
+</style>
+</head>
+<body>
+<main class="folha">
+
+  <header>
+    <div class="topo-cabecalho">
+      <div class="marca">VÓ LILA GASTROBAR</div>
+      <button type="button" class="btn-tema" id="btn-tema" aria-label="Alternar modo escuro" aria-pressed="false">
+        <span id="icone-tema" aria-hidden="true">🌙</span>
+        <span id="texto-tema">Modo escuro</span>
+      </button>
+    </div>
+    <h1>Proposta de valores</h1>
+    <p>Presença digital: Perfil no Google e página própria com cardápio e pedido direto.</p>
+    <p class="data">Icó, Ceará · 18/11/2026</p>
+  </header>
+
+  <h2>1. Google Meu Negócio</h2>
+  <p>Cuidamos do seu perfil no Google, onde a maioria dos clientes encontra o restaurante primeiro.</p>
+  <div class="bloco">
+    <div class="linha">
+      <div class="item">Implantação: auditoria, padronização de nome, endereço e telefone, categorias, atributos e fotos</div>
+      <div class="valor">R$ 450</div>
+    </div>
+    <div class="linha">
+      <div class="item">Mensalidade: respostas a comentários, até 1 post por semana, otimização de imagens e relatório mensal</div>
+      <div class="valor">R$ 250/mês</div>
+    </div>
+  </div>
+  <p class="suave">Contrato mínimo de 3 meses para a gestão mensal. A mensalidade começa após a implantação.</p>
+
+  <h2>2. Página própria</h2>
+  <p>Uma página leve, feita para o celular, com cardápio, botão de pedido e WhatsApp, no lugar do link genérico da bio.</p>
+
+  <div class="cartoes">
+    <div class="cartao">
+      <h3>Básico</h3>
+      <p class="suave">Página única para o celular.</p>
+      <ul>
+        <li>Cardápio por categoria, com preço</li>
+        <li>Botão de pedido para o Anota e WhatsApp</li>
+        <li>Endereço, horário e mapa iguais ao Google</li>
+        <li>Perguntas frequentes</li>
+      </ul>
+      <p class="preco"><strong>R$ 1.000</strong> de implantação</p>
+    </div>
+    <div class="cartao destaque">
+      <span class="tag">Recomendado</span>
+      <h3>Com SEO local</h3>
+      <p class="suave">Tudo do básico, com foco em aparecer nas buscas da região.</p>
+      <ul>
+        <li>Tudo do pacote básico</li>
+        <li>Títulos e descrições para buscas locais</li>
+        <li>Dados estruturados do restaurante</li>
+        <li>Palavras-chave da região (ex.: restaurante em Icó)</li>
+        <li>Medição de cliques em pedido e WhatsApp</li>
+      </ul>
+      <p class="preco"><strong>R$ 1.800</strong> de implantação</p>
+    </div>
+  </div>
+
+  <div class="bloco" style="margin-top:12px">
+    <strong>Adicional opcional: aplicativo instalável (PWA).</strong>
+    <p class="suave" style="margin:6px 0 0">A página pode ser instalada na tela inicial do celular e funcionar com conexão fraca. Valor: <strong>R$ 450</strong>.</p>
+  </div>
+
+  <h2>3. Manutenção da página</h2>
+  <div class="bloco">
+    Atualização de cardápio e preços: <strong>R$ 150/mês</strong>, com até 2 atualizações por mês. Atualizações extras são cobradas à parte.
+    <p class="suave" style="margin:8px 0 0">Contrato mínimo de 3 meses, igual ao da gestão do Google.</p>
+  </div>
+
+  <h2>4. Custos por conta do cliente</h2>
+  <div class="bloco">
+    <ul style="margin:0">
+      <li>Domínio (.com.br): cerca de R$ 40 a R$ 120 por ano, pago ao registro.br.</li>
+      <li>Hospedagem: cerca de R$ 10 a R$ 50 por mês, conforme o provedor.</li>
+      <li>Pedido e pagamento (Anota AI): valores conforme o contrato com o fornecedor.</li>
+    </ul>
+  </div>
+
+  <h2>5. Forma de pagamento e prazo</h2>
+  <div class="bloco">
+    <ul style="margin:0">
+      <li>Implantação: paga na aprovação, conforme o pacote escolhido.</li>
+      <li>Mensalidade do Google: a partir do segundo mês.</li>
+      <li>Prazo estimado: 4 semanas para o pacote completo.</li>
+    </ul>
+  </div>
+
+  <h2>6. Pontos de atenção</h2>
+  <div class="bloco">
+    <ul style="margin:0">
+      <li><strong>Fotos e vídeos:</strong> todo o material visual (fotos dos pratos, ambiente, logotipo e vídeos) deverá ser fornecido pelo cliente, sendo de sua inteira responsabilidade a produção, o envio e os direitos de uso.</li>
+      <li>Trocar o nome no Google exige nova verificação. A alteração é feita pelo dono ou gerente do perfil, em um dia de pouco movimento.</li>
+      <li>O Google não tem mais a seção de perguntas e respostas. As respostas que o cliente precisa ficam na página.</li>
+      <li>O botão de pedido depende de o Anota estar ativo no horário comercial.</li>
+      <li>Resultados no Google dependem de fatores fora do nosso controle. Não garantimos posição.</li>
+    </ul>
+  </div>
+
+  <div class="nota">
+    <strong>Observação:</strong> As fotos e vídeos utilizados no Google Meu Negócio e na página própria são fornecidos pelo cliente e de sua exclusiva responsabilidade.<br>
+    Os valores acima são uma proposta inicial. Podemos ajustar o escopo conforme as necessidades do restaurante.
+  </div>
+
+</main>
+
+<script>
+  (function () {
+    const html = document.documentElement;
+    const btnTema = document.getElementById('btn-tema');
+    const iconeTema = document.getElementById('icone-tema');
+    const textoTema = document.getElementById('texto-tema');
+
+    function aplicarTema(tema) {
+      const escuro = tema === 'dark';
+      if (escuro) {
+        html.setAttribute('data-theme', 'dark');
+      } else {
+        html.removeAttribute('data-theme');
+      }
+      btnTema.setAttribute('aria-pressed', String(escuro));
+      iconeTema.textContent = escuro ? '☀️' : '🌙';
+      textoTema.textContent = escuro ? 'Modo claro' : 'Modo escuro';
+    }
+
+    const temaSalvo = localStorage.getItem('vo-lila-tema');
+    const prefereEscuro = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+    aplicarTema(temaSalvo || (prefereEscuro ? 'dark' : 'light'));
+
+    btnTema.addEventListener('click', function () {
+      const atualEscuro = html.getAttribute('data-theme') === 'dark';
+      const novoTema = atualEscuro ? 'light' : 'dark';
+      aplicarTema(novoTema);
+      localStorage.setItem('vo-lila-tema', novoTema);
+    });
+
+    const cartoes = document.querySelectorAll('.cartao, .bloco');
+    cartoes.forEach(function (cartao) {
+      cartao.addEventListener('click', function () {
+        if (cartao.classList.contains('cartao')) {
+          document.querySelectorAll('.cartao').forEach(function (c) {
+            c.classList.remove('selecionado');
+          });
+          cartao.classList.add('selecionado');
+        }
+        cartao.classList.remove('pulsando');
+        void cartao.offsetWidth;
+        cartao.classList.add('pulsando');
+      });
+    });
+  })();
+</script>
+</body>
+</html>
